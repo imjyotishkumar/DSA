@@ -30,9 +30,9 @@ int trap(vector<int> heights, int n){
 
 int main(){
 
-vector<int> heights = {0,1,0,2,1,0,1,3,2,1,2,1};
+vector<int> heights = {4,2,0,6,3,2,5};
 int n = sizeof(heights);
-cout<<n;
+
 
 cout<<trap(heights, n); 
 

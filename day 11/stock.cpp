@@ -40,7 +40,11 @@ int main(){
 
 int price[]={2,44,67,32,34,1,46,78,73,98};
 int n=sizeof(price)/sizeof(int);
+
 profitStock(price,n);
+cout<<endl;
+cout<<sizeof(price)<<endl;
+cout<<sizeof(int)<<endl;
 
     return 0;
 }

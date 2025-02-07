@@ -56,7 +56,7 @@ void LevelorderTraversal(Node *root)
 
         if (curr == NULL)
         {
-            cout<<endl;
+            cout << endl;
             if (Q.empty())
             {
                 break;

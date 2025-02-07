@@ -17,7 +17,7 @@ return maxsum;
 }
 
 int main(){
-int arr[5]={1,2,4,-5,67};
+int arr[5]={1,2,3,4,5};
 int n=5;
 
 cout << kadan(arr,n);

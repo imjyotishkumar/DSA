@@ -1,33 +1,57 @@
 #include<iostream>
-#include<vector>
 using namespace std;
 
-class Solution{
+int profitstock(int prices[]){
+    // int sell =0;
+    // int purchase = arr[0];
+    // int day;
+    // int sellday;
 
-public:
-      void BubbleSort(vector<int>& arr){
-      int n= arr.size();
-      
-      for(int i = 0; i<n-1; i++){
-        for(int j = 0; j<n-i-1; j++){
-            if(arr[j]>arr[j+1]){
+    // for(int i = 0; i < n; i++){
+    //     if(purchase>arr[i]){
+    //         purchase = arr[i];
+    //         day = i+1;
+    //     }
+    // }
+    // cout<<"purchase price: "<<purchase<<endl;
+    // cout<<"purchase day: "<<day<<endl;
 
-            swap(arr[j],arr[j+1]);
+    // for(int i = day-1; i < n; i++){
+    //     if(sell<arr[i]){
+    //         sell = arr[i];
+    //         sellday= i+1;
+    //     }
+    // }
+    // cout<<"sell price: " <<sell<<endl;
+    // cout<<"sell day: "<< sellday<<endl;
+
+    // cout<< "profit is: "<< sell - purchase << endl;
+    
+     int n = sizeof(prices)/sizeof(int);
+        int purchase = prices[0];
+        int day;
+        int sell = 0;
+        for(int i = 0; i<n; i++){
+            if(purchase>prices[i]){
+                purchase = prices[i];
+                day = i+1;
             }
         }
-      }
-      for(int i=0;i<n;i++)
-      {
-        cout<<arr[i];
-      }
-      }
+         
+        for(int i = day-1; i<n; i++){
+            if(purchase<prices[i]){
+                sell = prices[i];
+            }
+        } 
 
-};
+        cout<<sell - purchase << endl;
+        return sell - purchase;
+    }
 
-int main() {
+int main(){
+int arr[] = {432,53,64,241,64,421,3563,7465,8765,456,765,1};
+int n = sizeof(arr)/sizeof(int);
+profitstock(arr,n);
 
-Solution s1;
-vector<int>arr={3,4,53,2,5,6,3,2,6,7,8};
-s1.BubbleSort(arr);
     return 0;
 }
